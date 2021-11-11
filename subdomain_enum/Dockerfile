@@ -4,7 +4,7 @@ MAINTAINER incidentresponsesandbox@gmail.com
 
 USER root
 
-# install sublist3r
+# install subdomain enumeration tools
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && apt-get upgrade -y && \
     apt-get install -y sublist3r sslscan amass \
