@@ -6,6 +6,7 @@ This Docker image contains the following social engineering tools.
 - SET - setoolkit
 - Maltego 
 - Metasploit
+- Wifiphisher
 
 ## Docker Image
 - https://hub.docker.com/r/habbdt/socialengineering
