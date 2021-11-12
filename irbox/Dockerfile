@@ -1,15 +1,19 @@
 FROM kalilinux/kali-rolling
-LABEL description="Tools for performing subdomain enumeration"
+LABEL description="Tools for Pentesting"
 MAINTAINER incidentresponsesandbox@gmail.com
 
 USER root
+ENV PATH="/root/go/bin:${PATH}"
 
 # install subdomain enumeration tools
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && apt-get upgrade -y && \
-    apt-get install -y sublist3r sslscan amass \
-                       golang build-essential manpages-dev \
-                       python3-pip git dnsrecon altdns &&\
+    apt-get install -y sslscan sqlmap dirb apktool john sublist3r amass \
+                       golang build-essential manpages-dev lynis wpscan \
+                       python3-pip git dnsrecon altdns nikto \
+                       aircrack-ng recon-ng hydra skipfish beef hashcat whatweb \
+                       gobuster wfuzz joomscan netcat-openbsd telnet \
+                       smbclient enum4linux unicornscan masscan &&\
                        unset DEBIAN_FRONTEND
 
 # install golang based tools
