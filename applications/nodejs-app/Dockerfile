@@ -1,5 +1,3 @@
-
-   
 FROM node:latest
 LABEL description="Simple NodeJS Application"
 MAINTAINER habbdt@gmail.com
